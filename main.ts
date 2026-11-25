@@ -22,7 +22,7 @@ function validatePng(bytes: Buffer): void {
     );
   }
   if (!bytes.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE)) {
-    throw new Error("Invalid PNG signature");
+    throw new Error("Invalid PNG signature in entry.png");
   }
 
   const ihdrLength = bytes.readUInt32BE(8);
